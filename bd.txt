@@ -1,0 +1,8 @@
+use biometricattendace;
+CREATE TABLE IF NOT EXISTS `Affecter` (
+			`idagent` int,
+			`idf` int,
+			`date` date,
+   CONSTRAINT cle_etrangere_affecter_frontiere FOREIGN KEY(idf) REFERENCES frontiere(idf),
+   CONSTRAINT cle_etrangere_affecter_agent FOREIGN KEY(idf) REFERENCES agent(idagent) 
+	) ENGINE=InnoDB DEFAULT CHARSET=latin1;
